@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: Params) {
 
 function fetchBlogInfo({ params }: Params) {
   const contents = fs
-    .readFileSync(path.join('./app/posts', params.slug + '.md'))
+    .readFileSync(path.join('posts', params.slug + '.md'))
     .toString();
 
   const parsedMarDown = matter(contents);
