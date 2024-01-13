@@ -8,6 +8,6 @@ test('Första sidan renderar en rubrik inuti main ', () => {
 
   within(main).getByRole('heading'),
     {
-      name: 'Detta är en rubrik',
+      name: 'Camillas Acme',
     };
 });
