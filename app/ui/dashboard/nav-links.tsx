@@ -24,6 +24,7 @@ const links = [
   { name: 'Blog', href: '/dashboard/blog', icon: PencilSquareIcon },
   { name: 'Kontakta oss', href: '/dashboard/contact', icon: PhoneIcon },
   { name: 'Om oss', href: '/dashboard/about', icon: LightBulbIcon },
+  { name: 'Våra tjänster', href: '/dashboard/services', icon: LightBulbIcon },
 ];
 
 export default function NavLinks() {
