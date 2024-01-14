@@ -16,12 +16,13 @@ export async function generateMetadata({ params }: Params) {
 
 function fetchBlogInfo({ params }: Params) {
   const contents = fs
-    .readFileSync(path.join('app//lib//posts//', params.slug + '.md'))
+    .readFileSync(path.join('app/lib/posts', params.slug + '.md'))
     .toString();
 
   const parsedMarDown = matter(contents);
-
   const htmlString = marked.parse(parsedMarDown.content);
+
+  console.log('parsed: ' + parsedMarDown.content);
 
   return {
     htmlString,
@@ -34,7 +35,7 @@ export default function Page({ params }: Params) {
 
   return (
     <>
-      <h1>test</h1>
+      <h1>{params.slug}</h1>
       <div dangerouslySetInnerHTML={{ __html: markDown.htmlString }} />
     </>
   );
