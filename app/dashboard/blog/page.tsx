@@ -3,7 +3,7 @@ import fs from 'fs';
 import { lusitana } from '@/app/ui/fonts';
 
 export default function Blog() {
-  const files = fs.readdirSync('lib/posts');
+  const files = fs.readdirSync('app/lib/posts');
 
   const fileNames = files.map((filename) => filename.replace('.md', ''));
 
